@@ -121,13 +121,29 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         //System.out.println("PrintJobs is not yet implemented");
-        for (int i = 0; i < someJobs.size(); i++) {
-            System.out.print("\n*****" + "\nposition type: "+ someJobs.get(i).get("position type") + "\nname: " + someJobs.get(i).get("name") + "\nemployer: " +someJobs.get(i).get("employer")+ "\nlocation: "
-               + someJobs.get(i).get("location") + "\ncore competency: "+ "\n*****\n");}
-        //System.out.print(someJobs.get(1).get("employer"));
-        //for(Map.Entry<String,String> job: someJobs.entrySet()){
+        //someJobs.get
+        // System.out.println(someJobs);;
+        // for (int i = 0; i < someJobs.size(); i++) {
+        //**   if(someJobs.get(i).get("employer").contains("Maritz")){
+        //  System.out.println("here");
+        //System.out.println(someJobs.get(i));
+        //System.out.println("nothing to see here");
+        // }
+        for (HashMap jobs : someJobs) {
+            System.out.print("\n*****\n");
+            for(Object keys: jobs.keySet()){
+                System.out.println(keys +": "+ jobs.get(keys));
+            }
+            System.out.print("*****\n");
+    }
+        }
+
+
+
+       // System.out.print(someJobs.get(1).get("name"));
+        {
           //  System.out.println(job.getKey());
-      // }
-       }
+      }
+       //}
 
 }
