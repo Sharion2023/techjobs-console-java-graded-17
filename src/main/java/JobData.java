@@ -99,7 +99,7 @@ public class JobData {
 
         for(HashMap<String,String> rows: allJobs) {
             for (Object keys : rows.keySet()) {
-                if (rows.get(keys).contains(value) || !jobs.contains(rows)) {
+                if (rows.get(keys).contains(value) && !jobs.contains(rows)) {
                     jobs.add(rows);
                 }
             }
