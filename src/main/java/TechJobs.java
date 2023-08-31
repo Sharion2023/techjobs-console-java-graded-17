@@ -129,21 +129,25 @@ public class TechJobs {
         //System.out.println(someJobs.get(i));
         //System.out.println("nothing to see here");
         // }
+        if(someJobs.isEmpty()){
+            System.out.println("No Results");}
+
         for (HashMap jobs : someJobs) {
             System.out.print("\n*****\n");
             for(Object keys: jobs.keySet()){
                 System.out.println(keys +": "+ jobs.get(keys));
-            }
+                }
             System.out.print("*****\n");
-    }
+            }
+
         }
 
 
 
        // System.out.print(someJobs.get(1).get("name"));
-        {
+
           //  System.out.println(job.getKey());
-      }
+
        //}
 
 }
