@@ -97,12 +97,14 @@ public class JobData {
         // TODO - implement this method
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
-        for(HashMap<String,String> row: allJobs){
-            if(row.containsValue(value)){
-                jobs.add(row);
+        for(HashMap<String,String> rows: allJobs) {
+            for (Object keys : rows.keySet()) {
+                if (rows.get(keys).contains(value) || !jobs.contains(rows)) {
+                    jobs.add(rows);
+                }
             }
-
         }
+
         System.out.println("useful");
         return jobs;
     }
